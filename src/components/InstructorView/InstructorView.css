@@ -1,0 +1,238 @@
+.instructor-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.instructor-view {
+  flex: 1;
+  padding: 1rem;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+.instructor-view.sidebar-open {
+  margin-left: 250px;
+}
+
+.instructor-view h2 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.date-group {
+  margin-bottom: 2rem;
+}
+
+.date-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  margin-bottom: 0rem;
+}
+
+.date-header h3 {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.dropdown-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.scales-grid {
+  padding: 1rem 0;
+  border: 1px solid #f5f5f5;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.scales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.scale-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.scale-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.activity-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.activity-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.scale-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #f1f5f9;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.team-members {
+  margin: 1rem 0 0 0;
+}
+
+.team-section-title {
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.team-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.member-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.member-name {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.leader-indicator {
+  color: #2153dd;
+  font-weight: 600;
+  background: #e1e8ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: #64748b;
+  margin-top: 4rem;
+}
+
+.instructor-content {
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.instructor-content h2 {
+ text-align: center; 
+}
+
+@media (max-width: 768px) {
+  .instructor-content {
+    padding: 1rem;
+  }
+}
+
+.date-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0rem;
+}
+
+.date-filter div {
+  display: flex;
+}
+
+.date-input {
+  padding: 0.50rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 200px;
+  background-color: white;
+  display: block;
+}
+
+.hide-input {
+  display: none;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #2153dd;
+  box-shadow: 0 0 0 2px rgba(33, 83, 221, 0.1);
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+.date-input.has-scales {
+  background-color: #ecfdf5;
+  border-color: #34d399;
+  color: #065f46;
+}
+
+.date-input.has-scales:focus {
+  box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.2);
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field:has(+ .has-scales) {
+  background-color: #34d399;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* For Firefox */
+.date-input {
+  position: relative;
+}
+
+.date-input::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.has-scales-day::after {
+  background-color: #34d399;
+  border-radius: 4px;
+}

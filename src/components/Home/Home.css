@@ -1,0 +1,142 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 45px;
+}
+
+.home-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-button svg {
+  margin-right: 12px;
+  width: 20px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 5px;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-button.logout {
+  color: white;
+  margin-top: auto;
+  background-color: transparent;
+}
+
+.nav-button.logout:hover {
+  background-color: #b91c1c;
+}
+
+.nav-button:hover {
+  background: #2b4c7e;
+  transform: translateX(5px);
+}
+
+.nav-button.active {
+  background: #1a3fa0;
+  transform: translateX(5px);
+}
+
+.logout {
+  background: #e53e3e;
+}
+
+.logout:hover {
+  background: #c53030;
+}
+
+.home-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: flex;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 999;
+    width: fit-content;
+    margin: 0px;
+    border-radius: 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .home-content {
+    margin-left: 0;
+    padding: 4rem 1rem 1rem 1rem;
+  }
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.date-picker {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.activities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
